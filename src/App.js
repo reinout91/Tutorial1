@@ -9,5 +9,6 @@ const App = () => (
     <Route path="/login" exact component={LoginPage} />
   </div> //hi
 );
+const Footer = () => <div className="footer">hello</div>;
 
 export default App;

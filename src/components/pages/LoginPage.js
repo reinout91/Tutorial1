@@ -6,8 +6,6 @@ class LoginPage extends React.Component {
     return (
       <div>
         <h1>Login page</h1>
-
-        <Link to="/forgot_password">Forgot Password?</Link>
       </div>
     );
   }
