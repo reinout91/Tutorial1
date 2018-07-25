@@ -7,10 +7,19 @@ import App from "./App";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import registerServiceWorker from "./registerServiceWorker";
+import rootReducer from "./rootReducer";
+import { composeWithDevTools } from "redux-devtools-extension";
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </BrowserRouter>,
   document.getElementById("root")
 );
